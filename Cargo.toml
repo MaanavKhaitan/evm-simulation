@@ -1,0 +1,14 @@
+[package]
+name = "evmsimulator"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+foundry-evm = { git = "https://github.com/foundry-rs/foundry" }
+foundry-config = { git = "https://github.com/foundry-rs/foundry" }
+revm = { version = "10.0.0", default-features = false }
+alloy = { version = "*", features = ["network", "signer-local", "signer-keystore", "rlp"]}
+ethers = { git = "https://github.com/gakonst/ethers-rs" }
+tokio = { version = "*", features = ["rt-multi-thread", "macros", "sync", "time"] }
+hex = { version = "*" }
+ansi_term = "0.12"
