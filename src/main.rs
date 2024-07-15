@@ -38,6 +38,7 @@ async fn main() {
     let mut binding = executor_builder.build(create_fork.env.clone(), backend_db);
     let executor = binding.set_tracing(foundry_evm::traces::TraceMode::Call);
 
+    // Transaction data
     let tx_data_hex = "28ed4f6c5936b3e602feca68a08a35cf6306445745b1d1a1ad00c5587e77f6d2ec15c9bc000000000000000000000000c50d163d143c244b3dafe84c9b58f1156eeeeeee";
     let tx_data_byte_array = decode(tx_data_hex).expect("Decoding failed");
     let tx_data_alloy_bytes: Option<Bytes> = Some(Bytes::from(tx_data_byte_array));
